@@ -3,7 +3,7 @@ import { customElement, property, query } from "lit/decorators.js";
 import { EditorState } from "@codemirror/state";
 import { EditorView, keymap } from "@codemirror/view";
 import { defaultKeymap, history, historyKeymap } from "@codemirror/commands";
-import { markdown } from "@codemirror/lang-markdown";
+import { markdown, markdownLanguage } from "@codemirror/lang-markdown";
 import { syntaxHighlighting, defaultHighlightStyle } from "@codemirror/language";
 
 @customElement("clover-editor")
@@ -35,7 +35,7 @@ class CloverEditor extends LitElement {
       extensions: [
         history(),
         keymap.of([...defaultKeymap, ...historyKeymap]),
-        markdown(),
+        markdown({ base: markdownLanguage }),
         syntaxHighlighting(defaultHighlightStyle),
       ],
     });
