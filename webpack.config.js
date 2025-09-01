@@ -3,7 +3,7 @@ import path from "path";
 
 export default {
   devtool: "eval-source-map",
-  entry: "./src/main.ts",
+  entry: "./src/demo/main.ts",
   output: {
     path: path.resolve("./dist"),
     publicPath: "/",
