@@ -21,6 +21,10 @@ class CloverEditor extends LitElement {
       height: 100vh;
       width: 100%;
     }
+    .cm-editor .cm-content {
+      caret-color: #eb368d;
+      font-family: "Lato", Helvetica, Arial, sans-serif;
+    }
   `;
 
   @query("#editor")
